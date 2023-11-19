@@ -15,15 +15,17 @@ try
     
     Authorize(driver);
     Thread.Sleep(1500);
-    //
-    // SearchText(driver,"цукенг");
-    // Thread.Sleep(1500);
-    //
-    // SearchText(driver,"К");
-    // Thread.Sleep(1500);
+    
+    SearchText(driver,"цукенг");
+    Thread.Sleep(1500);
+    
+    SearchText(driver,"К");
+    Thread.Sleep(1500);
     
     FindTeacher(driver);
     Thread.Sleep(1500);
+   
+    FindTeachers(driver);
     
     CloseWindow(driver);
 }
@@ -85,10 +87,27 @@ void SearchText(IWebDriver webDriver, string searchString)
 void FindTeacher(IWebDriver webDriver)
 {
     SearchText(webDriver, "Кожухов");
-    Thread.Sleep(1000);
-    Thread.Sleep(1000);
-    var element = driver.FindElement(By.XPath("//a[contains(text(), 'Люди')]"));
+    Thread.Sleep(2000);
+    var element = webDriver.FindElement(By.XPath("//a[contains(text(), 'Люди')]"));
     element.Click();
-    Thread.Sleep(1000);
+    Thread.Sleep(5000);
+    IWebElement element2 = webDriver.FindElement(By.XPath("//a[contains(text(), 'Кожухов Игорь Борисович')]"));
+    Console.WriteLine("Найден элемент с текстом");
+    Console.WriteLine(element2.Text);
+}
+
+void FindTeachers(IWebDriver webDriver)
+{
+    SearchText(webDriver, "Кожухов");
+    Thread.Sleep(2000);
+    var element = webDriver.FindElement(By.XPath("//a[contains(text(), 'Люди')]"));
+    element.Click();
+    Thread.Sleep(5000);
+    var teacherElements = webDriver.FindElements(By.ClassName("people-list__item-name"));
     
+    Console.WriteLine($"Всего элементов в таблице:{teacherElements.Count}");
+    foreach (var webElement in teacherElements)
+    {
+        Console.WriteLine(webElement.Text);
+    }
 }
