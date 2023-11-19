@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "aIwL4rliF7o6lPFgGsW7A7XBUwi9XUDPrspvq5oCX9h2DlM4k6mX7ggAmSfz1WRzSznjxF6XYicg1Itg3ReMbw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\petra\\RiderProjects\\Lab5Test\\Lab5Test\\Lab5Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\petra\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\petra\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\petra\\.nuget\\packages\\selenium.webdriver\\4.15.0\\selenium.webdriver.4.15.0.nupkg.sha512",
+    "C:\\Users\\petra\\.nuget\\packages\\selenium.webdriver.chromedriver\\119.0.6045.10500\\selenium.webdriver.chromedriver.119.0.6045.10500.nupkg.sha512",
+    "C:\\Users\\petra\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
